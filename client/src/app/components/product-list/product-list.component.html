@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <li *ngFor="let product of products">
+      <span>{{ product.nom }}</span>
+      <span class="price">{{ product.prix | currency:'EUR' }}</span>
+    </li>
+  </ul>
+</div>
