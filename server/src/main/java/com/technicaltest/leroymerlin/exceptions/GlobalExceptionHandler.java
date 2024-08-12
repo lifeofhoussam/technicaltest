@@ -16,11 +16,12 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        // Récupère tous les messages d'erreur de validation
         String errorMessage = ex.getBindingResult()
                                  .getAllErrors()
                                  .stream()
                                  .map(ObjectError::getDefaultMessage)
-                                 .collect(Collectors.joining(", "));
+                                 .collect(Collectors.joining(", ")); // Joint tous les messages d'erreur en une seule chaîne, séparés par des virgules
 
         Map<String, String> errorResponse = new HashMap<>();
         errorResponse.put("error", errorMessage);
