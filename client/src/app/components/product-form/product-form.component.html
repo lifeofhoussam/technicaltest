@@ -1,10 +1,10 @@
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="nom">Nom&nbsp;</label>
+    <label for="nom">Nom </label>
     <input id="nom" formControlName="nom" type="text">
   </div>
   <div>
-    <label for="prix">Prix&nbsp;</label>
+    <label for="prix">Prix </label>
     <input id="prix" formControlName="prix" type="number">
   </div>
   <button type="submit" [disabled]="productForm.invalid">Ajouter Produit</button>
