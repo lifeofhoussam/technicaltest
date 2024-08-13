@@ -41,3 +41,11 @@ Pour lancer le serveur en mode dévelopment:
 Après avoir lancé les 2 serveurs, il suffit d'aller sur http://localhost:4200 pour visualiser notre application.
 
 ![Screenshot](/technicaltest.gif)
+
+## References
+
+https://spring.io/
+
+https://v14.angular.io/docs
+
+https://www.baeldung.com/java-global-exception-handler
