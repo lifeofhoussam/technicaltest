@@ -17,14 +17,14 @@ public class Produit {
     /**
      * Nom du produit. Ne peut pas être vide.
      */
-    @NotBlank(message = "Le nom du produit ne peut pas être vide !")
+    @NotBlank(message = "Le nom du produit ne peut pas être vide!")
     private String nom;
 
     /**
      * Prix du produit. Ne peut pas être nul et doit être supérieur ou égal à 1.
      */
-    @NotNull(message = "Le prix est obligatoire !")
-    @Min(value = 1, message = "Le prix minimum est fixé à 1 !")
+    @NotNull(message = "Le prix est obligatoire!")
+    @Min(value = 1, message = "Le prix minimum est fixé à 1!")
     private Double prix;
 
     /**

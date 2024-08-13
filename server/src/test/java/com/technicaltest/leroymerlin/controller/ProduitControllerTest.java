@@ -59,6 +59,6 @@ public class ProduitControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"nom\":\"Produit Duplication\",\"prix\":15.0}"))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.error").value("There is already a product with this name!"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.error").value("Il existe déjà un produit avec ce nom!"));
     }
 }

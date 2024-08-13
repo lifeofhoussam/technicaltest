@@ -54,12 +54,12 @@ public class ProduitController {
     public ResponseEntity<Object> addProduit(@Valid @RequestBody Produit produit) {
         // Vérifie si un produit avec le même nom existe déjà
         boolean nameExists = produits.stream()
-                .anyMatch(p -> p.getNom().equalsIgnoreCase(produit.getNom()));
+                .anyMatch(p -> p.getNom().trim().equalsIgnoreCase(produit.getNom().trim()));
 
         // Si un produit avec ce nom existe déjà, retourne une erreur
         if (nameExists) {
             Map<String, String> errorResponse = new HashMap<>();
-            errorResponse.put("error", "Il existe déjà un produit avec ce nom !");
+            errorResponse.put("error", "Il existe déjà un produit avec ce nom!");
             return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST); // Retourne une réponse avec un code 400 Bad Request
         }
 

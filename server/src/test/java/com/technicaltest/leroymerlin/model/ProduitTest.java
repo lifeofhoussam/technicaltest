@@ -34,7 +34,7 @@ public class ProduitTest {
 
         // Vérifie qu'il y a une violation et que le message correspond
         assertThat(violations).hasSize(1);
-        assertThat(violations.iterator().next().getMessage()).isEqualTo("The product name can not be empty!");
+        assertThat(violations.iterator().next().getMessage()).isEqualTo("Le nom du produit ne peut pas être vide!");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class ProduitTest {
 
         // Vérifie qu'il y a une violation et que le message correspond
         assertThat(violations).hasSize(1);
-        assertThat(violations.iterator().next().getMessage()).isEqualTo("The price is mandatory!");
+        assertThat(violations.iterator().next().getMessage()).isEqualTo("Le prix est obligatoire!");
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ProduitTest {
 
         // Vérifie qu'il y a une violation et que le message correspond
         assertThat(violations).hasSize(1);
-        assertThat(violations.iterator().next().getMessage()).isEqualTo("The minimum price is set to 1!");
+        assertThat(violations.iterator().next().getMessage()).isEqualTo("Le prix minimum est fixé à 1!");
     }
 
     @Test
