@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductFormComponent,
-    NotificationComponent
+    NotificationComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
